@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<div style='margin-top:140px;'></div>
+
+<section>
+    <div class="container">
+        {% for result in context %}
+        <div class="card mx-3 my-5" style="width: 20rem;display: inline-block;">
+                <img src="{{result.1.0.3}}" class="card-img-top">
+                <div class="card-body">
+                    <h6>{{result.1.0.1}}</h6>
+                </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<div class="background" id="movie-bg">
+</div>
+
+<div class="container bos">
+    <h3 class="text-light">Lorem, ipsum dolor.</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id voluptates est consectetur temporibus enim nemo,
+        animi officia! Neque autem expedita earum quisquam itaque soluta repellat, perspiciatis, tempora ipsa
+        distinctio adipisci.</p>
+</div>
+
+<section>
+    <div class="find_movie bg-dark text-light">
+        <div class="find_movie_text text-secondary">
+            <h1 class="text-light">Which movie was it?</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, accusantium?</p>
+        </div>
+
+        <div class="container">
+            <form action="movies" method="post">
+                {% csrf_token %}
+                <input type="text" name="getResult" class="input-box">
+                <button type="submit" class="btn btn-outline-light">Start</button>
+            </form>  
+        </div>
+    </div>
+</section>
+
+{% endblock %}
